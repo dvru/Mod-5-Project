@@ -4,7 +4,7 @@ const User = require('../models/User');
 
 
 User.hasMany('issues');
-User.hasMany('comments');
+// User.hasMany('comments');
 // User.testProto();
 
 users.get('/', async (req, res) => {

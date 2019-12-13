@@ -3,7 +3,7 @@ const comments = express.Router();
 const Comment = require('../models/Comment');
 
 Comment.belongsTo('issue');
-Comment.belongsTo('user');
+// Comment.belongsTo('user');
 
 
 comments.get('/', async (req, res) => {
