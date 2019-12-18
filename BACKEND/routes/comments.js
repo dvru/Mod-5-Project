@@ -2,8 +2,20 @@ const express = require('express');
 const comments = express.Router();
 const Comment = require('../models/Comment');
 
+// Relationships
 Comment.belongsTo('issue');
-// Comment.belongsTo('user');
+Comment.belongsTo('user');
+
+
+// const Comment = comment.model('Comment', {
+//     issue() {
+//       return this.belongsTo('Issue')
+//     },
+//     user() {
+//       return this.belongsTo('User')
+//     }
+//   })
+
 
 
 comments.get('/', async (req, res) => {
@@ -25,8 +37,16 @@ comments.patch('/:id', async (req, res) => {
     res.json(await c.update(req.body));
 })
 
-comments.delete('/:id', (req, res) => {
-    res.json('not deleted');
+// comments.delete('/:id', (req, res) => {
+//     res.json('not deleted');
+// })
+
+comments.delete('/:id', async (req, res) => {
+    const comment = await Comment.find(req.params.id);
+    comment.delete();
+    res.json('deleted');
 })
+
+
 
 module.exports = comments;

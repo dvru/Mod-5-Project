@@ -1,11 +1,19 @@
 const express = require('express');
 const users = express.Router();
 const User = require('../models/User');
+const {through} = require('express')
+
+// Relationships
+User.hasMany('comments');
+User.hasMany('issues'), through, ('comments')
+
+// const User = user.model('User', {
+//     comments() {
+//       return this.belongsToMany('Comment').through('Issue')
+//     }
+//   })
 
 
-User.hasMany('issues');
-// User.hasMany('comments');
-// User.testProto();
 
 users.get('/', async (req, res) => {
     res.json(await User.all());
@@ -14,8 +22,8 @@ users.get('/', async (req, res) => {
 users.get('/:id', async (req, res) => {
     // User.testProto();
     const user = await User.find(req.params.id);
-    const logs = await user.logs();
-    res.json({...user, logs});
+    const comments = await user.comments();
+    res.json({...user, comments});
     // res.json(logs)
 
 })
@@ -35,5 +43,10 @@ users.delete('/:id', (req, res) => {
 })
 
 
+// users.delete('/:id', async (req, res) => {
+//     const user = await User.find(req.params.id);
+//     user.delete();
+//     res.json('deleted');
+// })
 
 module.exports = users;

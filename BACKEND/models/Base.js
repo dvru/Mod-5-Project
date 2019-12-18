@@ -2,13 +2,14 @@ const databaseSettings = require('../knexfile').development;
 const knex = require('knex')(databaseSettings);
 const pry = require('pryjs');
 
-class Base {
-
-    // all functions work the way they do in Ruby with ActiveRecord
-    // so far it's only been tested with sqlite3
-    
+class Base {   
     constructor(thang) {
         Object.assign(this, thang)
+    }
+
+
+    static establishConnect(connection){
+        knex = connection
     }
 
     static get tableName() {

@@ -1,9 +1,21 @@
 const express = require('express');
 const issues = express.Router();
 const Issue = require('../models/Issue');
+const {through} = require('express')
 
-Issue.belongsTo('user');
+// Relationships
 Issue.hasMany('comments');
+Issue.hasMany ('users'), through, ('comments')
+
+// const Issue = issue.model('Issue', {
+//     users() {
+//       return this.belongsToMany('User').through('Comment')
+//     }
+//   })
+
+
+
+
 
 issues.get('/', async (req, res) => {
     res.json(await Issue.all());
@@ -25,11 +37,17 @@ issues.patch('/:id', async (req, res) => {
     res.json(await issue.update(req.body));
 })
 
-issues.delete('/:id', async (req, res) => {
-    const issue = await Issue.find(req.params.id);
-    issue.delete();
-    res.json('deleted');
+issues.delete('/:id', (req, res) => {
+    res.json("not deleted")
 })
+
+
+
+// issues.delete('/:id', async (req, res) => {
+//     const issue = await Issue.find(req.params.id);
+//     issue.delete();
+//     res.json('deleted');
+// })
 
 
 module.exports = issues;
