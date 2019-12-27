@@ -5,16 +5,13 @@ const {through} = require('express')
 
 // Relationships
 Issue.hasMany('comments');
-Issue.hasMany ('users'), through, ('comments')
+Issue.hasMany ('users', { through: 'comments' })
 
 // const Issue = issue.model('Issue', {
 //     users() {
 //       return this.belongsToMany('User').through('Comment')
 //     }
 //   })
-
-
-
 
 
 issues.get('/', async (req, res) => {

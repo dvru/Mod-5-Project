@@ -4,18 +4,18 @@ exports.seed = async (knex) => {
     await knex('comments').del();
   
     await knex('users').insert([
-      { id: 1, firstName: 'Damini', lastName: 'Varu', age: 27 },
-      { id: 2, firstName: 'Vidhi', lastName: 'Sharma', age: 26 },
-      { id: 3, firstName: 'Josephine', lastName: 'Yao', age: 25 },
-      { id: 4, firstName: 'Fabiola', lastName: 'Mendoza', age: 30 },
-      { id: 5, firstName: 'Emma', lastName: 'Smith', age: 22 },
-      { id: 6, firstName: 'Ava', lastName: 'Johnson', age: 26 },
-      { id: 7, firstName: 'Isabella', lastName: 'Ramirez', age: 21 },
-      { id: 8, firstName: 'Mia', lastName: 'lin', age: 32 },
-      { id: 9, firstName: 'Sophia', lastName: 'Burt', age: 24 },
-      { id: 10, firstName: 'Maria', lastName: 'Rodriguez', age: 27 },
-      { id: 11, firstName: 'Olivia', lastName: 'Hamilton', age: 26 },
-      { id: 12, firstName: 'Charlotte', lastName: 'Garcia', age: 25 }
+      { id: 1, username: 'Damini', password: 'Varu', age: 27 },
+      { id: 2, username: 'Vidhi', password: 'Sharma', age: 26 },
+      { id: 3, username: 'Josephine', password: 'Yao', age: 25 },
+      { id: 4, username: 'Fabiola', password: 'Mendoza', age: 30 },
+      { id: 5, username: 'Emma', password: 'Smith', age: 22 },
+      { id: 6, username: 'Ava', password: 'Johnson', age: 26 },
+      { id: 7, username: 'Isabella', password: 'Ramirez', age: 21 },
+      { id: 8, username: 'Mia', password: 'lin', age: 32 },
+      { id: 9, username: 'Sophia', password: 'Burt', age: 24 },
+      { id: 10, username: 'Maria', password: 'Rodriguez', age: 27 },
+      { id: 11, username: 'Olivia', password: 'Hamilton', age: 26 },
+      { id: 12, username: 'Charlotte', password: 'Garcia', age: 25 }
     ]);
   
     await knex('issues').insert([

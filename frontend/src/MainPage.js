@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-function MainPage() {
+function MainPage(props) {
   return (
     <div>
-    <h2>SafeOfficeS
-    </h2>
+    {console.log('props in main page', props)}
+    {/* <h1>Welcome, {localStorage.username}</h1> */}
     </div>
   );
 }

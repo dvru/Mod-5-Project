@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-function HashTag() {
-  return (
-    <div>
-
-    </div>
-  );
+class HashTag extends React.Component{
+  render() {
+    return (
+      <div>
+{/* <h1>#SOS</h1> */}
+      </div>
+    );
+  }
 }
-
 export default HashTag;

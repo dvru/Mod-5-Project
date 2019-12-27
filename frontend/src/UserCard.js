@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-
-const UserCard = (props) => {
-  return (
-    <div>
-
-    </div>
-  );
+export default function UserCard(props) {
+    console.log(localStorage);
+    return (
+        <div>
+            {/* <p>name: {localStorage.firstName + ' ' + localStorage.lastName}</p> */}
+            
+        </div>
+    )
 }
-
-export default UserCard;
