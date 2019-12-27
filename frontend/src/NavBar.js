@@ -1,35 +1,62 @@
 import React from 'react';
-import IssueContainer from './IssueContainer'
-import UserContainer from './UserContainer'
+// import IssueContainer from './IssueContainer'
+// import UserContainer from './UserContainer'
 // import UserCard from './UserCard'
-import Meetup from './Meetup'
-import HashTag from './HashTag'
-import MainPage from './MainPage';
+// import Meetup from './Meetup'
+// import HashTag from './HashTag'
+// import MainPage from './MainPage';
+// import { Link } from 'react-router-dom'
 
 
 
-function NavBar(props) {
+
+class NavBar extends React.Component {
+
+  // constructor(props) {
+  //   super(props);
+    
+  // }
+    
+
+
+  render() {
+
   return (
     
 <div>
 <ul>
-<button> <MainPage/> Home </button>
+
+<button>
+  Home
+</button>
+
 <br></br>
-<button> <UserContainer/> User/Login </button>
+<button>
+ Login
+ </button>
+
 <br></br>
-<button> <IssueContainer/> Issues </button>
+<button>
+  Issues
+</button>
+
 <br></br>
-<button> <Meetup/> Meetup</button>
+<button>
+  Meetup
+</button>
+
 <br></br>
-<button> <HashTag/> #SOS</button>
+<button>
+  HashTag
+</button>
+
 <br></br>
+
 </ul>
 </div>
-
-  );
+  )
+  }
 }
-
-
 
 export default NavBar;
 

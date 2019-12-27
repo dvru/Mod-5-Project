@@ -3,12 +3,13 @@ import 'semantic-ui-css/semantic.min.css'
 import NavBar from './NavBar'
 // import MainPage from './MainPage'
 import IssueContainer from './IssueContainer';
-import UserContainer from './UserContainer'
+// import UserContainer from './UserContainer'
 import Meetup from './Meetup';
 import HashTag from './HashTag'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import MainPage from './MainPage';
 import LoginPage from './LoginPage'
+
 // import { render } from 'react-dom';
 
 
@@ -71,26 +72,22 @@ class App extends React.Component {
 render(){
   
   return (
-    <div className="App">
 
-     <BrowserRouter>
-     <NavBar {...this.props}/>
-       <Switch>
-       <Route exact path='/' render={() => <MainPage {...this.state.user} />} />
-         <Route exact path='/users' component={UserContainer} />
-         <Route exact path='/issue' render={() => <IssueContainer issues={this.state.user.issues} />} />         
-         <Route exact path='/Meetup' component={Meetup} />
-         <Route exact path='/Hashtag' component={HashTag} />
-         <Route exact path='/login' render={() => <LoginPage logout={this.logout} login={this.login} />} history={this.history} />
-       </Switch>
-     </BrowserRouter>
-
-    
-
-    </div>
-  );
-}
   
+ 
+  <BrowserRouter>
+   <NavBar/>
+    <Switch>
+        <Route exact path="/" render={() => <MainPage/>}/>         
+        <Route exact path='/issues' render={() => <IssueContainer/>}/>         
+        <Route exact path='/Meetup' component={Meetup} />
+        <Route exact path='/HashTag' component={HashTag} />
+        <Route exact path='/login' render={() => <LoginPage logout={this.logout} login={this.login} />} history={this.history} />
+      </Switch>
+    </BrowserRouter>
+  
+    );
+  }
 }
 
 export default App;
