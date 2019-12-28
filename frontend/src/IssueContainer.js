@@ -1,5 +1,6 @@
 import React from 'react';
 import IssueList from './IssueList'
+
 import Search from './Search'
 
 
@@ -13,6 +14,7 @@ constructor(){
     displayIssues: []
   }
 }
+
 
 
 componentDidMount(){ // fetching all the issues 
@@ -42,6 +44,7 @@ componentDidMount(){ // fetching all the issues
       <div>
       <Search handleChange={this.handleChange} /> 
       <IssueList displayIssues={this.state.displayIssues}/>
+
       </div>
     );
   }

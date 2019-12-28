@@ -1,12 +1,20 @@
 import React from 'react';
 
 
-function CommentForm() {
-  return (
-    <div>
+class CommentForm extends React.Component {
 
-    </div>
-  );
+  render(){
+    return(<div>
+      {/* <form onSubmit={(e) => {
+          this.props.addComment(e)
+          }}>
+          <input type='text' placeholder='Issue Name'/>
+          <input type='text' placeholder='Issue'/>
+          <input type='submit' value='Add Comment'/>
+      </form> */}
+  </div>)
+
+  }
 }
 
 export default CommentForm;

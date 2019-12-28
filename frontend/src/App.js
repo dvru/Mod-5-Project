@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import NavBar from './NavBar'
 // import MainPage from './MainPage'
 import IssueContainer from './IssueContainer';
+import IssueDetail from './IssueDetail';
 // import UserContainer from './UserContainer'
 import Meetup from './Meetup';
 import HashTag from './HashTag'
@@ -85,7 +86,9 @@ render(){
         <Route exact path='/signup' render={() => <SignUp/>}/>         
         <Route exact path='/login' render={() => <LoginPage logout={this.logout} login={this.login} />} history={this.history} />
 
-        <Route exact path='/issues' render={() => <IssueContainer/>}/>         
+        <Route exact path='/issues' render={() => <IssueContainer />}/>    
+        <Route path = '/issues/:id' render= {() => <IssueDetail /> }/>
+
         <Route exact path='/Meetup' component={Meetup} />
         <Route exact path='/HashTag' component={HashTag} />
       </Switch>
