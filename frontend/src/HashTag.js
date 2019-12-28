@@ -5,7 +5,7 @@ class HashTag extends React.Component{
   render() {
     return (
       <div>
-{/* <h1>#SOS</h1> */}
+<h2>#SOS</h2>
       </div>
     );
   }

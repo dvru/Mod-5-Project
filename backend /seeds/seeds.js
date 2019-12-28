@@ -3,19 +3,20 @@ exports.seed = async (knex) => {
     await knex('issues').del();
     await knex('comments').del();
   
+   
     await knex('users').insert([
-      { id: 1, username: 'Damini', password: 'Varu', age: 27 },
-      { id: 2, username: 'Vidhi', password: 'Sharma', age: 26 },
-      { id: 3, username: 'Josephine', password: 'Yao', age: 25 },
-      { id: 4, username: 'Fabiola', password: 'Mendoza', age: 30 },
-      { id: 5, username: 'Emma', password: 'Smith', age: 22 },
-      { id: 6, username: 'Ava', password: 'Johnson', age: 26 },
-      { id: 7, username: 'Isabella', password: 'Ramirez', age: 21 },
-      { id: 8, username: 'Mia', password: 'lin', age: 32 },
-      { id: 9, username: 'Sophia', password: 'Burt', age: 24 },
-      { id: 10, username: 'Maria', password: 'Rodriguez', age: 27 },
-      { id: 11, username: 'Olivia', password: 'Hamilton', age: 26 },
-      { id: 12, username: 'Charlotte', password: 'Garcia', age: 25 }
+      { id: 1, firstName: 'Damini', lastName: 'Varu', username: 'DV', age: 27, email: 'damvaru@gmail.com', password: '1234'},
+      { id: 2, firstName: 'Vidhi', lastName: 'Sharma', username: 'VS', age: 26, email: 'vidhisharma@gmail.com', password: '1245'},
+      { id: 3, firstName: 'Josephine', lastName: 'Yao', username: 'JY', age: 25, email: 'josieyao@gmail.com', password: '1235'},
+      { id: 4, firstName: 'Fabiola', lastName: 'Mendoza', username: 'FM', age: 30, email: 'fabdoza@gmail.com', password: '1256'},
+      { id: 5, firstName: 'Emma', lastName: 'Smith', username: 'ES', age: 22, email: 'emsmith@gmail.com', password: '1247'},
+      { id: 6, firstName: 'Ava', lastName: 'Johnson', username: 'AJ', age: 26, email: 'avjohnson@gmail.com', password: '1234'},
+      { id: 7, firstName: 'Isabella', lastName: 'Ramirez', username: 'IR', age: 21, email: 'isaramirez@gmail.com', password: '1246'},
+      { id: 8, firstName: 'Mia', lastName: 'Lin', username: 'ML', age: 32, email: 'mialin@gmail.com', password: '1234' },
+      { id: 9, firstName: 'Sophia', lastName: 'Burt', username: 'SB', age: 24, email: 'sophiabu@gmail.com', password: '1255'},
+      { id: 10, firstName: 'Maria', lastName: 'Rodriguez',username: 'MR', age: 27, email: 'mariarod@gmail.com', password: '1237'},
+      { id: 11, firstName: 'Olivia', lastName: 'Hamilton', username: 'OH',age: 26, email: 'olivhamil@gmail.com', password: '1249'},
+      { id: 12, firstName: 'Charlotte', lastName: 'Garcia',username: 'CG', age: 25, email: 'chargar@gmail.com', password: '1224'}
     ]);
   
     await knex('issues').insert([

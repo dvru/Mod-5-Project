@@ -5,7 +5,8 @@ import React from 'react';
 // import Meetup from './Meetup'
 // import HashTag from './HashTag'
 // import MainPage from './MainPage';
-// import { Link } from 'react-router-dom'
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -24,69 +25,28 @@ class NavBar extends React.Component {
   return (
     
 <div>
-<ul>
 
-<button>
-  Home
-</button>
+<Navbar bg="dark" variant="dark">
+    <Nav className="mr-auto">
 
-<br></br>
-<button>
- Login
- </button>
+      <Link className= "navLinks" to ="/home">Home</Link>
 
-<br></br>
-<button>
-  Issues
-</button>
+      <Link className= "navLinks" to ="/signup">Sign Up</Link>
+      <Link className= "navLinks" to ="/login">Login</Link>
+      
 
-<br></br>
-<button>
-  Meetup
-</button>
+      <Link className= "navLinks" to ="/issues">Issues</Link>
 
-<br></br>
-<button>
-  HashTag
-</button>
+      <Link className= "navLinks" to ="/Meetup">Meetup</Link>
 
-<br></br>
+      <Link className= "navLinks" to ="/HashTag">#SOS</Link>
+    
+    </Nav>
+</Navbar>
 
-</ul>
 </div>
   )
   }
 }
 
 export default NavBar;
-
-
-/* <div class="ui secondary menu">
-  <a class="active item">
-  <MainPage/> Home 
-  </a>
-  <a class="item">
-  <UserContainer/> User/Login 
-  </a>
-  <a class="item">
-  <IssueContainer/> Issues 
-  </a>
-  <a class="item">
-  <Meetup/> Meetup
-  </a>
-  <a class="item">
-  <HashTag/> #SOS
-  </a>
-  <div class="right menu">
-    <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search...">
-          <i class="search link icon"></i>
-      </div>
-    </div>
-  </div>
-  </div>
-    <a class="ui item">
-      Logout
-    </a>
-  </div> */

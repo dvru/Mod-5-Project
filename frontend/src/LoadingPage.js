@@ -3,7 +3,7 @@ import React from 'react';
 export default function LoadingPage() {
     return (
         <div>
-            <p>this is the loading page</p>
+            <h2>this is the loading page</h2>
         </div>
     )
 }

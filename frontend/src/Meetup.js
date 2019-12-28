@@ -5,7 +5,7 @@ class Meetup extends React.Component{
   render() {
     return (
       <div>
-    {/* <h1> Lets Meetup </h1> */}
+ <h2>Meetup Page</h2>
       </div>
     );
   }

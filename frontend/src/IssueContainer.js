@@ -1,5 +1,5 @@
 import React from 'react';
-// import IssueList from './IssueList'
+import IssueList from './IssueList'
 import Search from './Search'
 
 
@@ -41,7 +41,7 @@ componentDidMount(){ // fetching all the issues
     return (
       <div>
       <Search handleChange={this.handleChange} /> 
-      {/* <IssueList displayIssues={this.state.displayIssues}/> */}
+      <IssueList displayIssues={this.state.displayIssues}/>
       </div>
     );
   }

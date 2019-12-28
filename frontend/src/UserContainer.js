@@ -6,7 +6,7 @@ export default class UserContainer extends React.Component {
         // console.log(this.props)  
         return (
             <div>
-                <UserCard {...this.props}/>
+                {/* <UserCard {...this.props}/> */}
             </div>
         )
     }
