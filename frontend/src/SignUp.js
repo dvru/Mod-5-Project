@@ -1,14 +1,16 @@
 import React from 'react'
 // import { Modal, Button } from 'semantic-ui-react'
+// import { Link } from 'react-router-dom'
 
 export default function SignUp(props) {
-
+    console.log(props)
+    
     function range(start, end) {
         if(start === end) return [start];
         return [start, ...range(start + 1, end)];
     }
 
-    function signup(e) {
+    function signup(e, props) {
         e.preventDefault();
         // debugger;
         const [ firstName, lastName, username, age, email, password ] = range(0,5).map(i => e.target[i].value)
@@ -37,7 +39,9 @@ export default function SignUp(props) {
             localStorage.email = user.email
             if (user.status === 'success') {
                 console.log(localStorage);
-                props.history.push('/home');
+                console.log(props)
+                // debugger
+                props.history.push('/mainpage');
             }
         });
         
@@ -46,7 +50,8 @@ export default function SignUp(props) {
     return (
    
                 <div>
-                    <form  onSubmit={(e) => signup(e)} className="ui form" style={{padding: '2em'}}>
+                    <form  onSubmit={(e) => {signup(e, props)
+                                                          }} className="ui form" style={{padding: '2em'}}>
                         <div className="field">
                             <label>First Name</label>
                             <input placeholder="First Name" />

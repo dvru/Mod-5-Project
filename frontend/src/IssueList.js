@@ -3,11 +3,11 @@ import Issue from './Issue.js'
 
 
 const IssueList = (props) => {
-  //  console.log(props)
+  // console.log(props.displayIssues)
   return (
     <div>
 
-    {props.displayIssues.map(issue => <Issue issue={issue}/>)}
+    {props.displayIssues.map(issue => <Issue issue={issue} handleIssue={props.handleIssue} />)}
     </div>
   );
 }

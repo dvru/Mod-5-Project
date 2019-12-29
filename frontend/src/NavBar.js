@@ -29,7 +29,7 @@ class NavBar extends React.Component {
 <Navbar bg="dark" variant="dark">
     <Nav className="mr-auto">
 
-      <Link className= "navLinks" to ="/home">Home</Link>
+      <Link className= "navLinks" to ="/mainpage">Main Page</Link>
 
       <Link className= "navLinks" to ="/signup">Sign Up</Link>
       <Link className= "navLinks" to ="/login">Login</Link>

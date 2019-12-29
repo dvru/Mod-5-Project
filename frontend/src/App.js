@@ -12,6 +12,8 @@ import "./App.css"
 import MainPage from './MainPage';
 import LoginPage from './LoginPage'
 import SignUp from './SignUp';
+import Home from './Home'
+// import Comments from './Comments';
 
 // import { render } from 'react-dom';
 
@@ -22,7 +24,9 @@ class App extends React.Component {
     super();
 
     this.state = {
-      user: []
+      issueData: [],
+      displayIssues: [],
+      singleIssue: null
     }
   }
 
@@ -38,59 +42,87 @@ logout = () => {
   // console.log(localStorage);
 }
 
-login = (e) => {
-  e.preventDefault();
 
-  fetch('http://localhost:3000/users/login', {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      username: e.target[0].value,
-      password: e.target[1].value
+
+
+
+componentDidMount(){ // fetching all the issues 
+  fetch("http://localhost:8000/issues") // issue data
+  .then(res => res.json())
+  .then(issues => {
+    this.setState({
+      issueData: issues, // setting state value to issue
+      displayIssues: issues,
+      singleIssue: issues[1]
     })
-  }).then(res => res.json())
-  .then(user => {
-    if (user.status === 'success') {
-      localStorage.token = user.token;
-      localStorage.username = user.username;
-      localStorage.firstName = user.firstName;
-      localStorage.lastName = user.lastName;
-      localStorage.email = user.email;
-      localStorage.age = user.age;
-      localStorage.issues = user.issues;
-      localStorage.q = user.q;
-      // localStorage = user;
-      console.log(user);
-      this.setState({
-        user 
-      })
-    }
-  });
+  })
 }
 
+
+
+handleChange = (text) => { // when inputing text within the search handle 
+  // your code here
+  let display = this.state.displayIssues.filter((issue) => issue.name.toLowerCase().includes(text.toLowerCase())) 
+  this.setState({
+    issues: display
+  })
+}
+
+handleIssue = (issue) => { // single issue
+  // console.log(this.state.singleIssue)
+  // console.log(issue)
+  // debugger
+  this.setState({
+    singleIssue:issue
+  })
+  // debugger
+}
+
+// changeDisplay = () => {
+//   this.setState({
+//     displayComment: !this.state.displayComment,
+//     // id: 11
+//   })
+// }
+
+// addComment = (e) => {
+//   e.preventDefault()
+//   // debugger
+
+//   let Comments = { content: e.target[0].value
+//               }
+
+//   this.setState({
+//     comments: [...this.state.Comments, Comments],
+//     displayComment: !this.state.displayComment
+//   })
+// }
 
 
 render(){
   
   return (
 
-  
- 
   <BrowserRouter>
    <NavBar/>
     <Switch>
-        <Route exact path="/home" render={() => <MainPage/>}/>   
+        <Route exact path="/"component={Home}/>
+        <Route path="/mainpage" render={() => <MainPage/>}/>   
 
-        <Route exact path='/signup' render={() => <SignUp/>}/>         
-        <Route exact path='/login' render={() => <LoginPage logout={this.logout} login={this.login} />} history={this.history} />
+        <Route path='/signup' component={SignUp}/>         
+        <Route path='/login' render={() => <LoginPage 
+                                                      logout={this.logout} 
+                                                      login={this.login} />} 
+                                                      history={this.props.history} />
 
-        <Route exact path='/issues' render={() => <IssueContainer />}/>    
-        <Route path = '/issues/:id' render= {() => <IssueDetail /> }/>
+        <Route path='/issues' render={() => <IssueContainer handleChange={this.handleChange} 
+                                                            displayIssues={this.state.displayIssues}
+                                                            handleIssue={this.handleIssue}
+        />}/>    
+        <Route path = '/issues/:id' render= {() => <IssueDetail currentIssue={this.state.singleIssue} /> }/>
 
-        <Route exact path='/Meetup' component={Meetup} />
-        <Route exact path='/HashTag' component={HashTag} />
+        <Route path='/Meetup' component={Meetup} />
+        <Route path='/HashTag' component={HashTag} />
       </Switch>
     </BrowserRouter>
   

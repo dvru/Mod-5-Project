@@ -2,19 +2,26 @@ import React from 'react';
 import CommentForm from './CommentForm'
 
 
-function IssueDetail() {
+function IssueDetail(props) {
+  console.log(props.currentIssue)
+  // debugger 
+
   return (
+
+    <div>
+  {props.currentIssue ?
     <div>
     Description:
-   {/* <p>{this.props.issue.description}</p> */}
+    <br></br>
+   {props.currentIssue.description}
      <br/>
-    <ul>
-
-
-    </ul>
+  
     <CommentForm/>
-  </div>  
-    
+    </div> 
+    :
+    ''
+  }
+  </div>
   );
 }
 
