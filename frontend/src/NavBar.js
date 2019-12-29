@@ -31,7 +31,7 @@ class NavBar extends React.Component {
 
       <Link className= "navLinks" to ="/mainpage">Main Page</Link>
 
-      <Link className= "navLinks" to ="/signup">Sign Up</Link>
+      <Link className= "navLinks" to ="/register">Sign Up</Link>
       <Link className= "navLinks" to ="/login">Login</Link>
       
 
@@ -40,6 +40,7 @@ class NavBar extends React.Component {
       <Link className= "navLinks" to ="/Meetup">Meetup</Link>
 
       <Link className= "navLinks" to ="/HashTag">#SOS</Link>
+      <Link className= "navLinks" to ="/logout">Logout</Link>
     
     </Nav>
 </Navbar>

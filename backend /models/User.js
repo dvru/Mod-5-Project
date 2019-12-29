@@ -41,7 +41,7 @@ class User extends Base {
         if (bool) {
             return {user, bool};
         }
-        obj = {status: 'failed to find user'}
+        let obj = {status: 'failed to find user'}
         return {obj, bool};
 
 

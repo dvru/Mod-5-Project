@@ -1,29 +1,12 @@
 import React from 'react'
 
-class LoginPage extends React.Component {
-
-// handleLogin() {
-//     fetch('http://localhost:8000/users/1', {
-//         headers: {
-//             "Authorization": `Bearer ${localStorage.token}`
-//         }
-//     })
-//     .then(res => res.json())
-//     .then(console.log);
-// }
+export default function LoginPage(props) {
 
 
-// constructor(){
-//     super()
-// this.state = {
-//     user: []
-// }}
-
-
-login = (e) => {
+function login (e, props){
     e.preventDefault();
   
-    fetch('http://localhost:3000/login', {
+    fetch('http://localhost:8000/users/login', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -34,28 +17,32 @@ login = (e) => {
       })
     }).then(res => res.json())
     .then(user => {
+        console.log(user);
       if (user.status === 'success') {
+          console.log(user)
         localStorage.token = user.token;
         localStorage.username = user.username;
         localStorage.firstName = user.firstName;
         localStorage.lastName = user.lastName;
         localStorage.email = user.email;
+        localStorage.password = user.password;
         localStorage.age = user.age;
         localStorage.issues = user.issues;
         localStorage.comments = user.comments;
-        this.props.history.push('/mainpage')
+        props.history.push('/issues')
       }
-    });
+    })
+    e.target.reset();
   }
 
 
 
 
 
-render(){
+
     return (
         <div>
-            <form onSubmit={(e) => this.login(e)}>
+            <form onSubmit={(e) => {login(e, props)} }>
                 <label>username: </label>
                 <input placeholder='username' type='text'></input>
                 <label>password: </label>
@@ -65,6 +52,4 @@ render(){
         </div>
     
     )
-    }
 }
-export default LoginPage

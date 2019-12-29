@@ -9,13 +9,12 @@ function IssueDetail(props) {
   return (
 
     <div>
-  {props.currentIssue ?
+    {props.currentIssue ?
     <div>
     Description:
     <br></br>
    {props.currentIssue.description}
      <br/>
-  
     <CommentForm/>
     </div> 
     :

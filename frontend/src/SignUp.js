@@ -37,21 +37,21 @@ export default function SignUp(props) {
             localStorage.age = user.age;
             localStorage.token = user.token;
             localStorage.email = user.email
+            localStorage.password = user.password
             if (user.status === 'success') {
-                console.log(localStorage);
-                console.log(props)
+                // console.log(localStorage);
+                // console.log(props)
                 // debugger
-                props.history.push('/mainpage');
+                props.history.push('/login');
             }
         });
         
     }
 
     return (
-   
+
                 <div>
-                    <form  onSubmit={(e) => {signup(e, props)
-                                                          }} className="ui form" style={{padding: '2em'}}>
+                    <form  onSubmit={(e) => {signup(e, props)}} className="ui form" style={{padding: '2em'}}>
                         <div className="field">
                             <label>First Name</label>
                             <input placeholder="First Name" />
@@ -80,14 +80,9 @@ export default function SignUp(props) {
                             <label>Confirm Password</label>
                             <input placeholder="Password" type='password' />
                         </div>
-                        <div className="field">
-                            <div className="ui checkbox">
-                            <input type="checkbox" className="hidden" readOnly="" tabIndex="0" />
-                            <label>I agree to the Terms and Conditions</label>
-                            </div>
-                        </div>
                         <button type="submit" className="ui button">Submit</button>
                     </form>
+                
                 </div>  
 
     )

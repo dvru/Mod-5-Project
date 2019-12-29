@@ -11,6 +11,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import "./App.css"
 import MainPage from './MainPage';
 import LoginPage from './LoginPage'
+import LogoutPage from './LogoutPage'
 import SignUp from './SignUp';
 import Home from './Home'
 // import Comments from './Comments';
@@ -30,17 +31,6 @@ class App extends React.Component {
     }
   }
 
-logout = () => {
-  localStorage.clear();
-  localStorage.firstName = this.state.defaultUser.firstName;
-  localStorage.lastName = this.state.defaultUser.lastName;
-  localStorage.age = this.state.defaultUser.age;
-  localStorage.bio = this.state.defaultUser.bio;
-  this.setState({
-    user: this.state.defaultUser
-  })
-  // console.log(localStorage);
-}
 
 
 
@@ -70,13 +60,29 @@ handleChange = (text) => { // when inputing text within the search handle
 
 handleIssue = (issue) => { // single issue
   // console.log(this.state.singleIssue)
-  // console.log(issue)
+  console.log(issue)
   // debugger
   this.setState({
     singleIssue:issue
   })
   // debugger
 }
+
+logout(){
+  localStorage.clear();
+  localStorage.firstName = this.state.defaultUser.firstName;
+  localStorage.lastName = this.state.defaultUser.lastName;
+  localStorage.age = this.state.defaultUser.age;
+  localStorage.bio = this.state.defaultUser.bio;
+  this.setState({
+    user: this.state.defaultUser
+  })
+  // console.log(localStorage);
+}
+
+
+
+
 
 // changeDisplay = () => {
 //   this.setState({
@@ -109,15 +115,16 @@ render(){
         <Route exact path="/"component={Home}/>
         <Route path="/mainpage" render={() => <MainPage/>}/>   
 
-        <Route path='/signup' component={SignUp}/>         
+        <Route path='/register' component={SignUp}/>         
         <Route path='/login' render={() => <LoginPage 
                                                       logout={this.logout} 
                                                       login={this.login} />} 
                                                       history={this.props.history} />
+        <Route path='/logout' component={LogoutPage}/>         
 
-        <Route path='/issues' render={() => <IssueContainer handleChange={this.handleChange} 
-                                                            displayIssues={this.state.displayIssues}
-                                                            handleIssue={this.handleIssue}
+        <Route exact path='/issues' render={() => <IssueContainer handleChange={this.handleChange} 
+                                                                  displayIssues={this.state.displayIssues}
+                                                                  handleIssue={this.handleIssue}
         />}/>    
         <Route path = '/issues/:id' render= {() => <IssueDetail currentIssue={this.state.singleIssue} /> }/>
 

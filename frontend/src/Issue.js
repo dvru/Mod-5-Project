@@ -3,13 +3,12 @@ import {Form, FormControl, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Issue = (props) => {
-  console.log(props.issue)
+  // console.log(props.issue)
   // debugger
   return (
     <div>
-    {props.issue? 
+    {props.issue ? 
       <div>
-
       <tr>
         <Form inline>
          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -21,7 +20,6 @@ const Issue = (props) => {
      </div>
      :
      ''
-     
     }
     </div>
   )

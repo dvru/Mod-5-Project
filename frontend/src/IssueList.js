@@ -6,7 +6,6 @@ const IssueList = (props) => {
   // console.log(props.displayIssues)
   return (
     <div>
-
     {props.displayIssues.map(issue => <Issue issue={issue} handleIssue={props.handleIssue} />)}
     </div>
   );
