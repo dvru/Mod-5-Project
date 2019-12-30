@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentForm from './CommentForm'
+import { Link } from 'react-router-dom';
 
 
 function IssueDetail(props) {
@@ -7,20 +8,30 @@ function IssueDetail(props) {
   // debugger 
 
   return (
-
+    <ul>
+    <li>
     <div>
     {props.currentIssue ?
     <div>
     Description:
     <br></br>
-   {props.currentIssue.description}
+    
+   <p>{props.currentIssue.description}</p>
+  
      <br/>
     <CommentForm/>
+   
     </div> 
+    
     :
     ''
   }
+  <br></br>
+  <Link className= "navLinks" to ="/issues">Back</Link>
+
   </div>
+  </li>
+  </ul>
   );
 }
 

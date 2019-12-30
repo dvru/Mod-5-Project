@@ -7,6 +7,7 @@ import React from 'react';
 // import MainPage from './MainPage';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// import LogoutPage from './LogoutPage'
 
 
 
@@ -17,7 +18,8 @@ class NavBar extends React.Component {
   //   super(props);
     
   // }
-    
+
+
 
 
   render() {
@@ -28,20 +30,21 @@ class NavBar extends React.Component {
 
 <Navbar bg="dark" variant="dark">
     <Nav className="mr-auto">
+      <Link className= "navLinks" to ="/home">Home</Link>
 
-      <Link className= "navLinks" to ="/mainpage">Main Page</Link>
 
       <Link className= "navLinks" to ="/register">Sign Up</Link>
       <Link className= "navLinks" to ="/login">Login</Link>
-      
+
+      <Link className= "navLinks" to ="/mainpage">Main Page</Link>
 
       <Link className= "navLinks" to ="/issues">Issues</Link>
 
       <Link className= "navLinks" to ="/Meetup">Meetup</Link>
 
-      <Link className= "navLinks" to ="/HashTag">#SOS</Link>
+     
       <Link className= "navLinks" to ="/logout">Logout</Link>
-    
+
     </Nav>
 </Navbar>
 

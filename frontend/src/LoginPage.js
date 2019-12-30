@@ -4,6 +4,7 @@ export default function LoginPage(props) {
 
 
 function login (e, props){
+    console.log(props)
     e.preventDefault();
   
     fetch('http://localhost:8000/users/login', {
@@ -29,15 +30,27 @@ function login (e, props){
         localStorage.age = user.age;
         localStorage.issues = user.issues;
         localStorage.comments = user.comments;
-        props.history.push('/issues')
-      }
+        if (user.status === 'success') {
+            // console.log(localStorage);
+            // debugger
+            props.history.history.push('/mainpage');
+        }
+        }
     })
     e.target.reset();
   }
 
-
-
-
+// logout(e, props) {
+//     localStorage.clear();
+//     localStorage.firstName = this.state.defaultUser.firstName;
+//     localStorage.lastName = this.state.defaultUser.lastName;
+//     localStorage.age = this.state.defaultUser.age;
+//     localStorage.bio = this.state.defaultUser.bio;
+//     this.setState({
+//       user: this.state.defaultUser
+//     })
+//     // console.log(localStorage);
+//   }
 
 
     return (
@@ -47,9 +60,13 @@ function login (e, props){
                 <input placeholder='username' type='text'></input>
                 <label>password: </label>
                 <input type='password'></input> 
-                <button type='submit' >submit</button>
+                <button type='submit' className to ="/mainpage">submit</button>
             </form>
+            { /* <form onSubmit={(e) => {logout(e, props)}}>
+                <button type='logout' >Logout</button>
+            </form> */ }
         </div>
     
     )
 }
+/* <Link className= "navLinks" to ="/Meetup">Meetup</Link> */

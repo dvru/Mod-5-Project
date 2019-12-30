@@ -15,8 +15,11 @@ const Issue = (props) => {
          <Button variant="outline-info">Search</Button>
        </Form>
     </tr>
-   
+      <ul>
+      <li>
      <Link className= "navLinks" to = {`/issues/${props.issue.id}`} onClick= {() => props.handleIssue(props.issue)}> {props.issue.name}</Link>
+     </li>
+     </ul>
      </div>
      :
      ''

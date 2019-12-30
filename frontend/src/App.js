@@ -50,6 +50,8 @@ componentDidMount(){ // fetching all the issues
 
 
 
+
+
 handleChange = (text) => { // when inputing text within the search handle 
   // your code here
   let display = this.state.displayIssues.filter((issue) => issue.name.toLowerCase().includes(text.toLowerCase())) 
@@ -111,16 +113,13 @@ render(){
 
   <BrowserRouter>
    <NavBar/>
-    <Switch>
-        <Route exact path="/"component={Home}/>
+      <Switch>
+        <Route exact path="/home"component={Home}/>
         <Route path="/mainpage" render={() => <MainPage/>}/>   
 
         <Route path='/register' component={SignUp}/>         
-        <Route path='/login' render={() => <LoginPage 
-                                                      logout={this.logout} 
-                                                      login={this.login} />} 
-                                                      history={this.props.history} />
-        <Route path='/logout' component={LogoutPage}/>         
+        <Route path='/login' render={(history) => <LoginPage login={this.login} history={history} />}/>
+        <Route path='/logout' render={(history) => <LogoutPage logout={this.logout} history={history}/>}/>        
 
         <Route exact path='/issues' render={() => <IssueContainer handleChange={this.handleChange} 
                                                                   displayIssues={this.state.displayIssues}

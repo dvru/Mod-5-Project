@@ -1,10 +1,12 @@
 import React from 'react';
+import UserContainer from './UserContainer'
 
-
-function MainPage(props) {
+function MainPage() {
   return (
     <div>
-    <h2>Welcome To SafeOfficeS</h2>
+    
+    <h2>User Card</h2>
+    <UserContainer/>
     </div>
   );
 }
