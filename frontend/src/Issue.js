@@ -20,16 +20,16 @@ const Issue = (props) => {
      <Link className= "navLinks" to = {`/issues/${props.issue.id}`} onClick= {() => props.handleIssue(props.issue)}> {props.issue.name} </Link>
      </li>
      </ul>
+   
      </div>
      :
      ''
     }
-    <br></br>
-    <Link className= "navLinks" to ="/mainpage">Back to Main Page</Link>
+    
     </div>
-
   )
 }
 
 export default Issue;
+
 

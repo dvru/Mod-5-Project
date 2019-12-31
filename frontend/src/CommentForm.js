@@ -55,6 +55,7 @@ render(){
             onChange={(e)=> this.props.handleChange(e)}  
             />
        <button type='submit'> Add Comment </button>
+       <button>Delete</button>
 
       </form>
   </div>)

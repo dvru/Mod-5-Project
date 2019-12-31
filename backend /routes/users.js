@@ -6,7 +6,8 @@ const auth = require('../auth/local');
 
 // Relationships
 User.hasMany('comments');
-User.hasMany('issues'), through, ('comments')
+User.hasMany('issues', { through: 'comments'})
+
 
 // const User = user.model('User', {
 //     comments() {

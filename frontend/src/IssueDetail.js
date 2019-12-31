@@ -9,6 +9,8 @@ class IssueDetail extends React.Component {
     comments: []
   }
 
+  
+
   componentDidMount() {
     // console.log(this.props);
   }
@@ -59,6 +61,8 @@ class IssueDetail extends React.Component {
       })
     }
 
+
+
   render() {
 
     if (this.props.currentIssue && this.state.comments.length === 0) {
@@ -77,21 +81,24 @@ class IssueDetail extends React.Component {
       <p>{this.props.currentIssue.description}</p>
       
         <br/>
-        <CommentForm issueId={this.props.currentIssue} handleChange={this.handleChange} commentForm={this.commentForm}  />
+        <CommentForm issueId={this.props.currentIssue} handleChange={this.handleChange} commentForm={this.commentForm}/>
         <br></br>
         <br></br>
         <h3>Comments from Users:</h3>
         <li>
         {this.state.comments.map(
-        (comment) => <p> {comment.content} </p> )}
+        (comment) => <p> {comment.content}</p> )}
         </li>
+       
         </div> 
         :
         ''
       }
       <br></br>
       <Link className= "navLinks" to ="/issues">Back</Link>
-
+      <br></br>
+      <br></br>
+      <Link className= "navLinks" to ="/mainpage">Back to Profile</Link>
       </div>
       </li>
       </ul>

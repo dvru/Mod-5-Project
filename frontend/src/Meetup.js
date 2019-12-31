@@ -7,8 +7,11 @@ class Meetup extends React.Component{
       <div>
 <h2>Lets Meet!</h2>
 <br></br>
+
 <h3>Meetup name:</h3>
-<button> Create Meetup </button>
+<br></br>
+<br></br>
+<a href="https://www.meetup.com/start/location?fromOrganizerLanding=true"><button> Create Meetup </button></a>
 <br></br>
 <br></br>
 <Link className= "navLinks" to ="/mainpage">Back to Main Page</Link>
