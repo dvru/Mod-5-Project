@@ -1,6 +1,7 @@
 const express = require('express');
 const comments = express.Router();
 const Comment = require('../models/Comment');
+// const Issue = require('../models/Issue')
 
 // Relationships
 Comment.belongsTo('issue');
@@ -23,8 +24,9 @@ comments.get('/', async (req, res) => {
 })
 
 comments.get('/:id', async (req, res) => {
+    console.log(Comment.tableName);
     const c = await Comment.find(req.params.id);
-    const issue = await q.issue();
+    const issue = await c.issue();
     res.json({...c, issue})
 })
 

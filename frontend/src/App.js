@@ -108,7 +108,7 @@ logout(){
 
 
 render(){
-  
+  console.log(this.state.singleIssue);
   return (
 
   <BrowserRouter>

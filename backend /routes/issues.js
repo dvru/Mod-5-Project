@@ -6,6 +6,7 @@ const {through} = require('express')
 // Relationships
 Issue.hasMany('comments');
 Issue.hasMany ('users', { through: 'comments' })
+// Issue.belongsTo('user')
 
 // const Issue = issue.model('Issue', {
 //     users() {
@@ -15,14 +16,21 @@ Issue.hasMany ('users', { through: 'comments' })
 
 
 issues.get('/', async (req, res) => {
+    // let issues = await Issue.all()
+    // let newIssues = await issues.map(async (i) => {
+    //     let comments = await i.comments();
+    //     return {
+    //         ...i,
+    //         comments
+    //     }
+    // })
     res.json(await Issue.all());
 })
 
 issues.get('/:id', async (req, res) => {
     const issue = await Issue.find(req.params.id);
-    const user = await issue.user()
     const comments = await issue.comments();
-    res.json({...issue, user, comments})
+    res.json({...issue, comments})
 })
 
 issues.post('/', async (req, res) => {

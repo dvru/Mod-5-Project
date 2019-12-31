@@ -18,10 +18,11 @@ function login (e, props){
       })
     }).then(res => res.json())
     .then(user => {
-        console.log(user);
+        // console.log(user);
       if (user.status === 'success') {
-          console.log(user)
+          // console.log(user)
         localStorage.token = user.token;
+        localStorage.userId = user.id
         localStorage.username = user.username;
         localStorage.firstName = user.firstName;
         localStorage.lastName = user.lastName;

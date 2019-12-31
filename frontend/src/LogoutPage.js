@@ -11,15 +11,18 @@ function logout(e, props) {
     this.setState({
       user: this.state.defaultUser
     })
-    // console.log(localStorage);
+    // if (this.state.defaultUser.status === 'success') {
+    //   // console.log(localStorage);
+    //   // console.log(props)
+    //   // debugger
+    //   props.history.push('/home');
+    // }
   }
-
-
 return (
     <div>
         <h1>Goodbye!</h1>
         <form onSubmit={(e) => {logout(e, props)}}>
-        <button type='submit' onClick= {() => props.history.push('/home')}>Logout</button>
+        <button type='submit' className to ="/home">logout</button>
         </form>
     </div>
 )
