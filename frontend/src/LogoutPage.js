@@ -22,7 +22,7 @@ return (
     <div>
         <h1>Goodbye!</h1>
         <form onSubmit={(e) => {logout(e, props)}}>
-        <button type='submit' className to ="/home">logout</button>
+        <button type='submit' className to ="/home">lot</button>
         </form>
     </div>
 )
