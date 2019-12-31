@@ -68,28 +68,27 @@ class IssueDetail extends React.Component {
     if (this.props.currentIssue && this.state.comments.length === 0) {
       this.getComments();
     }
-
+    console.log(this.state.comments)
     return (
+      
         <ul>
         <li>
         <div>
         {this.props.currentIssue ?
+
         <div>
         Description:
         <br></br>
         
-      <p>{this.props.currentIssue.description}</p>
+        <p>{this.props.currentIssue.description}</p>
       
         <br/>
         <CommentForm issueId={this.props.currentIssue} handleChange={this.handleChange} commentForm={this.commentForm}/>
         <br></br>
         <br></br>
         <h3>Comments from Users:</h3>
-        <li>
         {this.state.comments.map(
-        (comment) => <p> {comment.content}</p> )}
-        </li>
-       
+        (comment) => <p> User: {comment.content}</p> )}
         </div> 
         :
         ''

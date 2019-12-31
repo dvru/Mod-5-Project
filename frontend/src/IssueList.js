@@ -6,6 +6,7 @@ const IssueList = (props) => {
   // console.log(props.displayIssues)
   return (
     <div>
+    <br></br>
     {props.displayIssues.map(issue => <Issue issue={issue} handleIssue={props.handleIssue} />)}
     <br></br>
     <Link className= "navLinks" to ="/mainpage">Back to Main Page</Link>

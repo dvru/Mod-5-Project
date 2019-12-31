@@ -11,7 +11,7 @@ function logout(e, props) {
     this.setState({
       user: this.state.defaultUser
     })
-    // if (this.state.defaultUser.status === 'success') {
+    // if (localStorage.clear === 'clear') {
     //   // console.log(localStorage);
     //   // console.log(props)
     //   // debugger
@@ -20,11 +20,32 @@ function logout(e, props) {
   }
 return (
     <div>
-        <h1>Goodbye!</h1>
+        <h4> Are you sure you wanna go?</h4>
+        <h4> Here's a few links for your support:</h4>
+        <br></br>
         <form onSubmit={(e) => {logout(e, props)}}>
-        <button type='submit' className to ="/home">logout</button>
+        <button type='submit' className to ="/logout">logout</button>
         </form>
     </div>
 )
 
 }
+
+// if (user.status === 'success') {
+//   // console.log(user)
+// localStorage.token = user.token;
+// localStorage.userId = user.id
+// localStorage.username = user.username;
+// localStorage.firstName = user.firstName;
+// localStorage.lastName = user.lastName;
+// localStorage.email = user.email;
+// localStorage.password = user.password;
+// localStorage.age = user.age;
+// localStorage.issues = user.issues;
+// localStorage.comments = user.comments;
+// if (user.status === 'success') {
+//     // console.log(localStorage);
+//     // debugger
+//     props.history.history.push('/mainpage');
+// }
+// }

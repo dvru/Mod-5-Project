@@ -21,7 +21,6 @@ class NavBar extends React.Component {
 
 
 
-
   render() {
 
   return (
@@ -47,6 +46,7 @@ class NavBar extends React.Component {
 
     </Nav>
 </Navbar>
+
 
 </div>
   )

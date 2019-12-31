@@ -12,7 +12,7 @@ class UserCard extends React.Component{
   constructor() {
     super();
     this.state = {
-      // comments: [],
+      comments: [],
       userComments: []
     }
   }
@@ -27,15 +27,19 @@ class UserCard extends React.Component{
     }) // single user data
     .then(res => res.json())
     .then(comments => {
-      let singleComment = comments.filter(c=> c.user_id === parseInt(localStorage.id))
+      let singleComment = this.sortComments(comments, localStorage.userId)
       // console.log('this is single comment', singleComment)
         this.setState({
+          comments,
         userComments: singleComment  // setting state value to issue
         }, ()=> console.log('state SHOULD be set', this.state))
     })
     }
 
-  
+  //this finds own comments using the array of all comments AND user id 
+  sortComments = (arr, id)=>{
+    return arr.filter(c=> c.user_id === parseInt(id))
+  }
 
 
 render(){
@@ -44,11 +48,16 @@ render(){
   // console.log (user)
     return (
       <div>
-      <h4> {user.firstName} {user.lastName} </h4>
+      <h4>Name: {user.firstName} {user.lastName} </h4>
       <h4>Age: {user.age} </h4>
 
    
-      <h4>Your comments: {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}</h4>
+      <h4>
+      <button>Your comments: </button>
+      <p>
+      {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
+      </p>
+      </h4>
     
       
       <br></br>
@@ -56,10 +65,11 @@ render(){
       <br></br>
       <br></br>
       <h4>List of Users</h4>
-      {this.props.displayUsers.map(user => <User user={user}  />)}      
+      {this.props.displayUsers.map(user => <User user={user} comments= {this.sortComments(this.state.comments, user.id)} />)}      
       </div>
       
         )
   }
 }
 export default UserCard;
+
