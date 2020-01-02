@@ -4,7 +4,9 @@ import UserContainer from './UserContainer'
 function MainPage() {
   return (
     <div>
-    <h2>User Card</h2> 
+    <br></br>
+    <br></br>
+    <h2>User Page</h2> 
     <UserContainer/>
     </div>
   );

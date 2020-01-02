@@ -7,11 +7,11 @@ const Home = () => { // sending props
     <div className="div3">
     <br></br>
     <br></br>
-    <br></br>
 
     <h2>Welcome</h2>
     <h2>To</h2>
     <h2>SafeOfficeS</h2>
+    
     <div className="div8">SOS</div>
     <br></br>
     <br></br>

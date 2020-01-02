@@ -5,6 +5,8 @@ class Meetup extends React.Component{
   render() {
     return (
       <div>
+      <br></br>
+    <br></br>
         <h2>Lets Meet!</h2>
         <br></br>
         <br></br>
