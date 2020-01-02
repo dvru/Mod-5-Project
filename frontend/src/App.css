@@ -27,9 +27,9 @@
     background-color: white;
     width: 1000px;
     height: 1000px;
-    border: 20px solid black;
+    border: 15px solid black;
     padding: 90px;
-    margin: 100px;
+    margin: 50px;
     margin-left: 550px;
 }
 
@@ -122,4 +122,23 @@ h6 {
     size: 50px;
     margin: 50px;
     margin-left: 20px;
+}
+
+h7 {
+    margin: 55px;
+    margin-left: 50px;
+}
+
+
+.div8 {
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    width: 90px;
+    height: 70px;
+    border: 5px solid rgb(207, 28, 28);
+    padding: 5px;
+    margin: 20px;
+    margin-left: 275px;
 }
