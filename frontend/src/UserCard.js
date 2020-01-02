@@ -47,14 +47,13 @@ render(){
   let user = localStorage
   // console.log (user)
     return (
-      <div>
+    <div>
       {console.log('this is my user',user)}
       <h4>Name: {user.firstName} {user.lastName} </h4>
       <h4>Age: {user.age}</h4>
       <h4>
     
       <button>Your comments:</button>
-
       {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
       <br></br>
 
@@ -63,12 +62,13 @@ render(){
      
       <br></br>
       <br></br>
-      <h4>List of Users</h4>
-      <div class="ui grid">
-      <div class="four wide column"></div>
+      
+      <h4>List of Users:</h4>
+ 
       {this.props.displayUsers.map(user => <User user={user} comments= {this.sortComments(this.state.comments, user.id)} />)}      
+  
       </div>
-      </div>
+      
         )
   }
 }

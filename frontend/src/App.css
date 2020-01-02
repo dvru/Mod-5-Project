@@ -7,7 +7,7 @@
 
 .navLinks2 {
     margin-right: 75px;
-    color: black;
+    color: red;
     font-family: "Courier New", Courier, monospace;
     font-size: 16px;
     text-align: center;
@@ -65,7 +65,7 @@ p {
     text-align: center;
     padding: 30px;
     margin: 50px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .div3 {
@@ -94,7 +94,32 @@ p {
 }
 
 .i {
-    size: 20px;
-    padding: 20px;
+    size: 50px;
+    padding: 10px;
     margin: 50px;
+}
+
+
+.div6 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    padding: 3px;
+    margin: 3px;
+    columns: 2;
+    row-gap: 5;
+}
+
+.div7 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    padding: 3px;
+    margin: 3px;
+    columns: 2;
+ 
+}
+
+h6 {
+    size: 50px;
+    margin: 50px;
+    margin-left: 20px;
 }

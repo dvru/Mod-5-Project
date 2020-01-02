@@ -9,8 +9,15 @@ const Home = () => { // sending props
     <h2>To</h2>
     <h2>SafeOfficeS</h2>
     <br></br>
+    <p>
     <Link className= "navLinks2" to ="/register">Lets Sign You up</Link>
+    <br></br>
+    <br></br>
+    <Link className= "navLinks2" to ="/login">Login</Link>
+    <h6>
     <i className="folder open outline icon"></i>
+    </h6>
+    </p>
     </div>
   )
   

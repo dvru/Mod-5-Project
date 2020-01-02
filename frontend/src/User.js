@@ -8,19 +8,38 @@ const User = (props) => {
 console.log(props.user);
 
 return (
-<div className="div3">
-  <ul class="list-group">
+<div className="div6">
+
     <li class="list-group-item list-group-item-danger">
-          <h2>{props.user.firstName} {props.user.lastName}</h2> 
-            <h5>{props.user.age}</h5> 
-         
-          <h5>Comments:</h5>
+          <h5>{props.user.firstName}</h5> 
+          <h5>{props.user.lastName}</h5> 
+          <h5>{props.user.age}</h5> 
+          <br></br>
+          <p>
+          <button><Link className= "navLinks2" to ="/Meetup">Connect</Link></button>
+          </p>
         <p>
-        <h2>{props.comments.length !== 0 ? props.comments.map(c=> <Comments comment = {c}/>): null}</h2>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h5>Comments:</h5>
+    
+        {props.comments.length !== 0 ? props.comments.map(c=> <Comments comment = {c}/>): null}
         </p>
-        <button><Link className= "navLinks2" to ="/Meetup">Connect</Link></button>
+        <br></br>
+       
     </li>
-  </ul>
+
 </div>
   )
 }

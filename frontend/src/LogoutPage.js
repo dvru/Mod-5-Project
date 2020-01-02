@@ -20,9 +20,39 @@ function logout(e, props) {
   }
 return (
     <div>
+    <br></br>
+    <br></br>
+    <br></br>
         <h2> Are you sure you wanna go?</h2>
-        <h4> Here's a few links for your support:</h4>
         <br></br>
+        <br></br>
+        
+
+        <p>
+        <h5>
+        Here's a few links for your support:
+        </h5>
+        </p>
+        <br></br>
+        <br></br>
+        <p>
+        <h5>WOMEN IN THE WORKPLACE</h5>
+        <a href="https://leanin.org/women-in-the-workplace-2019?gclid=EAIaIQobChMImpKmvsHl5gIVhMDACh3LjgMrEAMYAiAAEgKZNPD_BwE"><button> Women In the Workplace Study </button></a>
+        </p>
+        <p>
+        <h5>WOMENS HEALTH IN THE OFFICE</h5>
+        <a href="https://twitter.com/womenshealth?lang=en"><button> Office on Womens health </button></a>
+        </p>
+        <br></br>
+        <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+      <p>
+      <i class="angle double down icon"></i>
+      </p>
+      <br></br>
         <form onSubmit={(e) => {logout(e, props)}}>
         <p>
         <button type='submit'>logout</button>
@@ -32,6 +62,7 @@ return (
 )
 
 }
+
 
 // if (user.status === 'success') {
 //   // console.log(user)
