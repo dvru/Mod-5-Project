@@ -54,7 +54,7 @@ render(){
       <h4>
     
       <button>Your comments:</button>
-      {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
+      {this.state.userComments.length > 0 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
       <br></br>
 
       </h4>

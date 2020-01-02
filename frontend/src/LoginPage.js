@@ -64,7 +64,7 @@ function login (e, props){
                 <br></br>
                 <br></br>
                 <label>password: </label>
-                <input placeholder='password' type='text'></input> 
+                <input placeholder='password' type='password'></input> 
                 <br></br>
                 <br></br>
                 <br></br>
