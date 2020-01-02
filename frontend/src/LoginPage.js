@@ -55,17 +55,16 @@ function login (e, props){
 
 
     return (
-        <div>
+      <div className="div2">
             <form onSubmit={(e) => {login(e, props)} }>
                 <label>username: </label>
                 <input placeholder='username' type='text'></input>
+                <br></br>
                 <label>password: </label>
-                <input type='password'></input> 
+                <input placeholder='password' type='text'></input> 
+                <br></br>
                 <button type='submit' className to ="/mainpage">submit</button>
             </form>
-            { /* <form onSubmit={(e) => {logout(e, props)}}>
-                <button type='logout' >Logout</button>
-            </form> */ }
         </div>
     
     )

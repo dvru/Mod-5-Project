@@ -17,7 +17,7 @@ const Issue = (props) => {
     </tr>
       <ul>
       <li>
-     <Link className= "navLinks" to = {`/issues/${props.issue.id}`} onClick= {() => props.handleIssue(props.issue)}> {props.issue.name} </Link>
+     <Link className= "navLinks2" to = {`/issues/${props.issue.id}`} onClick= {() => props.handleIssue(props.issue)}> {props.issue.name} </Link>
      </li>
      </ul>
    

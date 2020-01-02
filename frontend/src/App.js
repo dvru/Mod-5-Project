@@ -112,6 +112,7 @@ render(){
   return (
 
   <BrowserRouter>
+  <div className="div1">
    <NavBar/>
       <Switch>
         <Route exact path="/home"component={Home}/>
@@ -130,8 +131,9 @@ render(){
         <Route path='/Meetup' component={Meetup} />
         <Route path='/HashTag' component={HashTag} />
       </Switch>
+      </div>
     </BrowserRouter>
-  
+
     );
   }
 }

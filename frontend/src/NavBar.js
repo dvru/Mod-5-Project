@@ -25,8 +25,7 @@ class NavBar extends React.Component {
 
   return (
     
-<div>
-
+  
 <Navbar bg="dark" variant="dark">
     <Nav className="mr-auto">
       <Link className= "navLinks" to ="/home">Home</Link>
@@ -48,7 +47,6 @@ class NavBar extends React.Component {
 </Navbar>
 
 
-</div>
   )
   }
 }

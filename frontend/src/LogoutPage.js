@@ -4,13 +4,13 @@ export default function LogoutPage(props) {
 
 function logout(e, props) {
     localStorage.clear();
-    localStorage.firstName = this.state.defaultUser.firstName;
-    localStorage.lastName = this.state.defaultUser.lastName;
-    localStorage.age = this.state.defaultUser.age;
-    localStorage.bio = this.state.defaultUser.bio;
-    this.setState({
-      user: this.state.defaultUser
-    })
+    // localStorage.firstName = this.state.defaultUser.firstName;
+    // localStorage.lastName = this.state.defaultUser.lastName;
+    // localStorage.age = this.state.defaultUser.age;
+    // localStorage.bio = this.state.defaultUser.bio;
+  
+    props.history.history.push('/home')
+  
     // if (localStorage.clear === 'clear') {
     //   // console.log(localStorage);
     //   // console.log(props)
@@ -20,11 +20,13 @@ function logout(e, props) {
   }
 return (
     <div>
-        <h4> Are you sure you wanna go?</h4>
+        <h2> Are you sure you wanna go?</h2>
         <h4> Here's a few links for your support:</h4>
         <br></br>
         <form onSubmit={(e) => {logout(e, props)}}>
-        <button type='submit' className to ="/logout">logout</button>
+        <p>
+        <button type='submit'>logout</button>
+        </p>
         </form>
     </div>
 )

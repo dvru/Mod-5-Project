@@ -1,3 +1,100 @@
 .navLinks {
-    margin-right: 10px;
+    margin-right: 80px;
+    color: white;
+    text-align: left;
+}
+
+
+.navLinks2 {
+    margin-right: 75px;
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+}
+
+.navLinks3 {
+    margin-right: 75px;
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+.div1 {
+    background-color: white;
+    width: 1000px;
+    height: 1000px;
+    border: 20px solid black;
+    padding: 90px;
+    margin: 100px;
+    margin-left: 550px;
+}
+
+h2 {
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+}
+
+h4 {
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    text-align: left;
+} 
+
+h5 {
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+} 
+
+p {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.div2 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+    margin: 50px;
+    margin-left: 100px;
+}
+
+.div3 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+}
+
+.field {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 17px;
+}
+
+.div4 {
+    padding: 20px;
+    margin: 50px;
+}
+
+
+.div5 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    text-align: right;
+}
+
+.i {
+    size: 20px;
+    padding: 20px;
+    margin: 50px;
 }

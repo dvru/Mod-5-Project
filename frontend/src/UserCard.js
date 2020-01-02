@@ -48,26 +48,27 @@ render(){
   // console.log (user)
     return (
       <div>
+      {console.log('this is my user',user)}
       <h4>Name: {user.firstName} {user.lastName} </h4>
-      <h4>Age: {user.age} </h4>
-
-   
+      <h4>Age: {user.age}</h4>
       <h4>
-      <button>Your comments: </button>
-      <p>
-      {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
-      </p>
-      </h4>
     
-      
+      <button>Your comments:</button>
+
+      {this.state.userComments.length > 1 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
       <br></br>
-      <button><Link className= "navLinks" to ="/issues">Create an Issue</Link></button>
+
+      </h4>
+      <button><Link className= "navLinks3" to ="/issues">Create an Issue</Link></button>
+     
       <br></br>
       <br></br>
       <h4>List of Users</h4>
+      <div class="ui grid">
+      <div class="four wide column"></div>
       {this.props.displayUsers.map(user => <User user={user} comments= {this.sortComments(this.state.comments, user.id)} />)}      
       </div>
-      
+      </div>
         )
   }
 }

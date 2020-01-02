@@ -77,16 +77,20 @@ class IssueDetail extends React.Component {
         {this.props.currentIssue ?
 
         <div>
+        <h2>
         Description:
+        </h2>
         <br></br>
-        
         <p>{this.props.currentIssue.description}</p>
       
         <br/>
+        <p>
         <CommentForm issueId={this.props.currentIssue} handleChange={this.handleChange} commentForm={this.commentForm}/>
+        </p>
         <br></br>
         <br></br>
-        <h3>Comments from Users:</h3>
+        <h5>Comments from Users:</h5>
+        <br></br>
         {this.state.comments.map(
         (comment) => <p> User: {comment.content}</p> )}
         </div> 
@@ -94,10 +98,10 @@ class IssueDetail extends React.Component {
         ''
       }
       <br></br>
-      <Link className= "navLinks" to ="/issues">Back</Link>
+      <Link className= "navLinks2" to ="/issues">Back to Issues</Link>
       <br></br>
       <br></br>
-      <Link className= "navLinks" to ="/mainpage">Back to Profile</Link>
+      <Link className= "navLinks2" to ="/mainpage">Back to Main Page</Link>
       </div>
       </li>
       </ul>
