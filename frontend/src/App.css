@@ -1,16 +1,37 @@
+
+
+
+
 .navLinks {
-    margin-right: 80px;
-    color: white;
+    margin: 5px;
+    margin-right: 90px;
+    margin-left: 90px;
+    background-position: center;
+    color: black;
     text-align: left;
+    font-family: "trochi";
+    font-size: 25px;
+}
+
+.navLinks1 {
+    /* margin-right: 75px; */
+    color:grey;
+    font-family: "trochi";
+    font-size: 25px;
+    /* text-align: right; */
+    margin-left: 825px;
+    margin-top: -900px;
 }
 
 
 .navLinks2 {
-    margin-right: 75px;
+    /* margin-right: 75px; */
     color: red;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 16px;
-    text-align: center;
+    font-family: "trochi";
+    font-size: 25px;
+    /* text-align: center; */
+    /* margin-left: 650px; */
+    margin-top: -90px;
 }
 
 .navLinks3 {
@@ -22,20 +43,34 @@
 }
 
 
-
-.div1 {
-    background-color: white;
-    width: 1000px;
-    height: 1000px;
-    border: 15px solid black;
-    padding: 80px;
-    margin: 5px;
-    margin-left: 530px;
+.navLinks4 {
+    /* margin-right: 75px; */
+    color: grey;
+    font-family: "trochi";
+    font-size: 25px;
+    /* background-color: darkgray; */
+    background-size: auto;
+    /* text-align: center; */
+    /* margin-left: 650px;
+    margin-top: 400px; */
 }
+/* 
+.div1 {
+    /* background-image: url("1.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    /* padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-left: 230px; */ 
+/* }  */
 
 h2 {
     color: black;
     font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
     font-size: 40px;
     text-align: center;
 }
@@ -49,8 +84,9 @@ h4 {
 
 h5 {
     color: black;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 20px;
+    font-family: "trochi";
+    font-style: underline;
+    font-size: 30px;
     text-align: center;
 } 
 
@@ -60,20 +96,38 @@ p {
 }
 
 .div2 {
-    font-family: "Courier New", Courier, monospace;
+    background-image: url("1.jpg");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    /* font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
     padding: 30px;
     margin: 50px;
-    margin-left: 50px;
+    margin-left: 50px; */
 }
 
 .div3 {
-    font-family: "Courier New", Courier, monospace;
+    background-image: url("2.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    font-family: "trochi";
+    /* margin-left: 230px; */
+    /* font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
     padding: 20px;
-    margin: 50px;
+    margin: 50px; */
 }
 
 .field {
@@ -82,31 +136,60 @@ p {
 }
 
 .div4 {
-    padding: 20px;
-    margin: 50px;
+    background-image: url("3.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    color: black;
+    font-family: "trochi";
+    font-size: 30px;
+    text-align: center;
+    /* padding: 20px;
+    margin: 50px; */
 }
 
 
 .div5 {
+    background-image: url("4.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
     font-family: "Courier New", Courier, monospace;
     font-size: 15px;
     text-align: right;
+     /* font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    padding: 3px;
+    margin: 3px;*/ 
+    columns: 2;
+    /* row-gap: 5; */ 
 }
 
-.i {
-    size: 50px;
-    padding: 10px;
-    margin: 50px;
-}
 
 
 .div6 {
-    font-family: "Courier New", Courier, monospace;
+    background-image: url("5.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px; 
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    /* font-family: "Courier New", Courier, monospace;
     font-size: 10px;
     padding: 3px;
     margin: 3px;
     columns: 2;
-    row-gap: 5;
+    row-gap: 5; */
 }
 
 .div7 {
@@ -114,7 +197,21 @@ p {
     font-size: 10px;
     padding: 3px;
     margin: 3px;
-    columns: 2;
+    columns: 1;
+    row-gap: 2;
+    /* background-image: url("6.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    /* padding: 125px;
+    margin: 10px;
+    margin-top: 40px; */
+    /* font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    padding: 3px;
+    margin: 3px;
+    columns: 2; */
  
 }
 
@@ -131,7 +228,16 @@ h7 {
 
 
 .div8 {
+    background-image: url("6.png");
     background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-left: -30px;
+    /* background-color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 40px;
     font-weight: bold;
@@ -140,5 +246,41 @@ h7 {
     border: 5px solid rgb(207, 28, 28);
     padding: 5px;
     margin: 20px;
-    margin-left: 275px;
+    margin-left: 275px; */
+}
+
+.div9 {
+    background-image: url("7.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.div10 {
+    background-image: url("8.png");
+    background-color: white;
+    width: 1900px;
+    height: 925px;
+    /* border: 3px solid black; */
+    padding: 125px;
+    margin: 10px;
+    margin-top: 40px;
+}
+
+.div11 {
+    margin-left: 1450px;
+    margin-top: -90px;
+}
+
+.div12 {
+    margin-left: 1500px;
+    margin-top: -40px;
+}
+
+.div13 {
+    columns: 2;
 }

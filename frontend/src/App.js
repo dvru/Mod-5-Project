@@ -9,6 +9,7 @@ import Meetup from './Meetup';
 import HashTag from './HashTag'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import "./App.css"
+import "./Style.css"
 import MainPage from './MainPage';
 import LoginPage from './LoginPage'
 import LogoutPage from './LogoutPage'
@@ -110,9 +111,11 @@ logout(){
 render(){
   // console.log(this.state.singleIssue);
   return (
-
+    
   <BrowserRouter>
+  
   <div className="div1">
+ 
    <NavBar/>
       <Switch>
         <Route exact path="/home"component={Home}/>

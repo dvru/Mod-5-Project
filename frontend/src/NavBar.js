@@ -26,23 +26,23 @@ class NavBar extends React.Component {
   return (
     
   
-<Navbar bg="dark" variant="dark">
+<Navbar bg="light" variant="light">
     <Nav className="mr-auto">
-      <Link className= "navLinks" to ="/home">Home</Link>
+      <button><Link className= "navLinks" to ="/home">Home</Link></button>
 
 
-      <Link className= "navLinks" to ="/register">Sign Up</Link>
-      <Link className= "navLinks" to ="/login">Login</Link>
+      <button><Link className= "navLinks" to ="/register">Sign Up</Link></button>
+      <button><Link className= "navLinks" to ="/login">Login</Link></button>
 
-      <Link className= "navLinks" to ="/mainpage">Main Page</Link>
+      <button><Link className= "navLinks" to ="/mainpage">Main Page</Link></button>
 
-      <Link className= "navLinks" to ="/issues">Issues</Link>
+      <button><Link className= "navLinks" to ="/issues">Issues</Link></button>
 
-      <Link className= "navLinks" to ="/Meetup">Meetup</Link>
+      <button><Link className= "navLinks" to ="/Meetup">Meetup</Link></button>
 
      
-      <Link className= "navLinks" to ="/logout">Logout</Link>
-
+      <button><Link className= "navLinks" to ="/logout">Logout</Link></button>
+      
     </Nav>
 </Navbar>
 

@@ -50,7 +50,7 @@ export default function SignUp(props) {
 
     return (
 
-                <div>
+            <div className="div3">
                     <form  onSubmit={(e) => {signup(e, props)}} className="ui form" style={{padding: '2em'}}>
                         <div className="field">
                             <label>First Name</label>

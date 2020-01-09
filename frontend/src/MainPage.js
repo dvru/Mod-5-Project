@@ -3,10 +3,13 @@ import UserContainer from './UserContainer'
 
 function MainPage() {
   return (
-    <div>
+    <div className="div5">
     <br></br>
     <br></br>
-    <h2>User Page</h2> 
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
     <UserContainer/>
     </div>
   );

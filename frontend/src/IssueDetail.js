@@ -72,14 +72,16 @@ class IssueDetail extends React.Component {
     return (
       
         <ul>
-        <li>
-        <div>
+  
+        <div className="div8">
         {this.props.currentIssue ?
 
         <div>
-        <h2>
-        Description:
-        </h2>
+    
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
         <p>{this.props.currentIssue.description}</p>
       
@@ -98,12 +100,14 @@ class IssueDetail extends React.Component {
         ''
       }
       <br></br>
+      <br></br>
+      <br></br>
       <Link className= "navLinks2" to ="/issues">Back to Issues</Link>
       <br></br>
       <br></br>
       <Link className= "navLinks2" to ="/mainpage">Back to Main Page</Link>
       </div>
-      </li>
+      
       </ul>
       );
     }

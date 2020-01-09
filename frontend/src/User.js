@@ -8,28 +8,17 @@ const User = (props) => {
 console.log(props.user);
 
 return (
-<div className="div6">
+  <div className="div7">
 
-    <li class="list-group-item list-group-item-danger">
+    <li class="list-group-item list-group-item-secondary">
           <h5>{props.user.firstName}</h5> 
           <h5>{props.user.lastName}</h5> 
           <h5>{props.user.age}</h5> 
           <br></br>
           <p>
-          <button><Link className= "navLinks2" to ="/Meetup">Connect</Link></button>
+          <button><Link className= "navLinks4" to ="/Meetup">Connect</Link></button>
           </p>
         <p>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
         <br></br>
         <h5>Comments:</h5>

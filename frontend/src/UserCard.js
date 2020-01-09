@@ -56,16 +56,19 @@ render(){
       <button>Your comments:</button>
       {this.state.userComments.length > 0 ? this.state.userComments.map(comment => <Comments comment={comment} />): null}
       <br></br>
-
-      </h4>
       <button><Link className= "navLinks3" to ="/issues">Create an Issue</Link></button>
+      </h4>
+     
      
       <br></br>
       <br></br>
-      
+      <br></br>
+      <br></br>
+      <br></br>
       <h4>List of Users:</h4>
-
-      <div style={{overflow:"scroll",height:'25em'}}>
+      <br></br>
+      <br></br>
+      <div style={{overflow:"scroll",height:'35em'}}>
       {this.props.displayUsers.map(user => <User user={user} comments= {this.sortComments(this.state.comments, user.id)} />)}      
       </div>
 

@@ -55,10 +55,11 @@ function login (e, props){
 
 
     return (
-      <div className="div2">
+      <div className="div4">
                 <br></br>
                 <br></br>
             <form onSubmit={(e) => {login(e, props)} }>
+
                 <label>username: </label>
                 <input placeholder='username' type='text'></input>
                 <br></br>
