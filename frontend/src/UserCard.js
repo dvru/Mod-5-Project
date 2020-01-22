@@ -68,7 +68,8 @@ render(){
       <h4>List of Users:</h4>
       <br></br>
       <br></br>
-      <div style={{overflow:"scroll",height:'35em'}}>
+      <br></br>
+      <div style={{overflow:"scroll",height:'40em'}}>
       {this.props.displayUsers.map(user => <User user={user} comments= {this.sortComments(this.state.comments, user.id)} />)}      
       </div>
 

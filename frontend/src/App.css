@@ -104,6 +104,7 @@ p {
     padding: 125px;
     margin: 10px;
     margin-top: 40px;
+    /* margin-left: 80px; */
     /* font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     text-align: center;
@@ -122,6 +123,7 @@ p {
     margin: 10px;
     margin-top: 40px;
     font-family: "trochi";
+    /* margin-left: 80px; */
     /* margin-left: 230px; */
     /* font-family: "Courier New", Courier, monospace;
     font-size: 20px;
@@ -148,6 +150,7 @@ p {
     font-family: "trochi";
     font-size: 30px;
     text-align: center;
+    /* margin-left: 80px; */
     /* padding: 20px;
     margin: 50px; */
 }
@@ -165,6 +168,7 @@ p {
     font-family: "Courier New", Courier, monospace;
     font-size: 15px;
     text-align: right;
+    /* margin-left: 80px; */
      /* font-family: "Courier New", Courier, monospace;
     font-size: 10px;
     padding: 3px;
@@ -184,6 +188,7 @@ p {
     padding: 125px;
     margin: 10px;
     margin-top: 40px;
+    /* margin-left: 80px; */
     /* font-family: "Courier New", Courier, monospace;
     font-size: 10px;
     padding: 3px;
@@ -236,7 +241,8 @@ h7 {
     padding: 125px;
     margin: 10px;
     margin-top: 40px;
-    margin-left: -30px;
+    margin-left: -20px;
+    
     /* background-color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 40px;
